@@ -32,6 +32,7 @@ function register_new_widgets( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/btns/wd_btn1.php' );
 	require_once( __DIR__ . '/widgets/btns/wd_btn2.php' );
+	require_once( __DIR__ . '/widgets/btns/wd_btn3.php' );
 
 	$widgets_manager->register( new \widget_button_1() );
 	$widgets_manager->register( new \widget_button_2() );
