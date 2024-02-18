@@ -68,6 +68,16 @@ class widget_button_4 extends \Elementor\Widget_Base
 			]
 		);
 		$this->add_control(
+			'text_color_front_hover',
+			[
+				'label' => esc_html__( 'Text Color hover', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .btn4_text_color_hover' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_control(
 			'font_family',
 			[
 				'label' => esc_html__( 'Font Family', 'textdomain' ),
@@ -94,18 +104,15 @@ class widget_button_4 extends \Elementor\Widget_Base
 			[
 				'name' => 'border',
 				'selector' => '{{WRAPPER}} .btn4_border',
-			]
-		);
-		$this->add_control(
-			'custom_box_shadow',
-			[
-				'label' => esc_html__( 'Box Shadow', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::BOX_SHADOW,
-				'selectors' => [
-					'{{SELECTOR}}' => 'box-shadow: {{HORIZONTAL}}px {{VERTICAL}}px {{BLUR}}px {{SPREAD}}px {{COLOR}};',
+				'fields_options' => [
+					'border_color' => [
+						'label' => __( 'Border Color', 'textdomain' ),
+						'type' => \Elementor\Controls_Manager::COLOR,
+					],
 				],
 			]
 		);
+
 		$this->end_controls_section();
 
 
@@ -115,7 +122,14 @@ class widget_button_4 extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();
 
 		?>
-
+<style>
+	.btn4 {
+    --bgbtn4: <?php echo $settings['border_color'] ?>;
+	}
+	.btn4:hover {
+    color: <?php echo $settings['text_color_front_hover'] ?> !important;
+  }
+</style>
 <a class="btn4 btn4_ff btn4_border btn4_bg_color_front btn4_text_color_front" href="<?php echo $settings['link_button']['url'];?>"
 
 <?php if($settings['link_button']['nofollow']==true){
