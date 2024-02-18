@@ -21,11 +21,13 @@ function add_elementor_widget_categories_claro( $elements_manager ) {
 }
 add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories_claro' );
 // add style file
-function register_styles_clarotm(){
-    wp_register_style('widget_ctm_style',plugins_url('css/ex_ctm_style.css',__FILE__));
+function register_style_clarotm(){
+    wp_register_style('widget_ctm_style',plugins_url('style.css',__FILE__));
 	wp_enqueue_style('widget_ctm_style');
 }
-add_action('wp_enqueue_scripts','register_styles_clarotm');
+add_action('wp_enqueue_scripts','register_style_clarotm');
+
+
 function register_new_widgets( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/btns/wd_btn1.php' );

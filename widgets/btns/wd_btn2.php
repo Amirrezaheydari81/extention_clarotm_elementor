@@ -125,54 +125,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();
 
 		?>
-<style>
-.btn2-scene
-{
-	width:10em;
-	justify-content:center;
-	align-items:center
-}
 
-.btn2-cube
-{
-	cursor:pointer;
-	transition:all .85s cubic-bezier(.17,.67,.14,.93);
-	transform-style:preserve-3d;
-	transform-origin:100% 50%;
-	width:10em;
-	height:4em
-}
-
-.btn2-cube:hover
-{
-	transform:rotateX(-90deg)
-}
-
-.btn2-side
-{
-	box-sizing:border-box;
-	position:absolute;
-	display:inline-block;
-	height:4em;
-	width:10em;
-	text-align:center;
-	text-transform:uppercase;
-	padding-top:1.5em;
-	font-weight:700
-}
-
-.btn2-back
-{
-	transform:rotateX(90deg) translate3d(0,0,2em);
-	box-shadow:inset 0 0 0 5px #fff
-}
-
-.btn2-front
-{
-	box-shadow:inset 0 0 0 5px #fff;
-	transform:translate3d(0,0,2em)
-}
-</style>
 <?php //var_dump($settings['link_button']); ?>
 <a href="<?php echo $settings['link_button']['url'];?>"
 <?php if($settings['link_button']['nofollow']==true){
