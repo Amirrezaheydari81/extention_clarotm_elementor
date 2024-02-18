@@ -12,7 +12,7 @@ function add_elementor_widget_categories_claro( $elements_manager ) {
 	$elements_manager->add_category(
 		'clarotm-category',
 		[
-			'title' => esc_html__( 'ویجت های اختصاصی کلارو', 'elementor' ),
+			'title' => esc_html__( 'Claro exclusive widgets', 'elementor' ),
 			'icon' => 'fa fa-plug',
 			'active'=>true,
 		]

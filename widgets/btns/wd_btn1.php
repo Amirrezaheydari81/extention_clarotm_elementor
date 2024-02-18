@@ -10,7 +10,7 @@ class widget_button_1 extends \Elementor\Widget_Base {
 		return ['widget_ctm_style'];
 	}
 	public function get_title() {
-		return ' دکمه جذاب شماره 1';
+		return 'Attractive button #1';
 	}
 
 	public function get_icon() {

@@ -8,7 +8,7 @@ class widget_button_2 extends \Elementor\Widget_Base
     }
 
     public function get_title() {
-		return 'دکمه جذاب شماره 2';
+		return 'Attractive button #2';
 	}
 
     public function get_icon()
@@ -126,12 +126,52 @@ class widget_button_2 extends \Elementor\Widget_Base
 
 		?>
 <style>
-.scene{width:10em;justify-content:center;align-items:center}
-.cube{cursor:pointer;transition:all .85s cubic-bezier(.17,.67,.14,.93);transform-style:preserve-3d;transform-origin:100% 50%;width:10em;height:4em}
-.cube:hover{transform:rotateX(-90deg)}
-.side{box-sizing:border-box;position:absolute;display:inline-block;height:4em;width:10em;text-align:center;text-transform:uppercase;padding-top:1.5em;font-weight:700}
-.back{transform:rotateX(90deg) translate3d(0,0,2em);box-shadow:inset 0 0 0 5px #fff}
-.front{box-shadow:inset 0 0 0 5px #fff;transform:translate3d(0,0,2em)}
+.btn2-scene
+{
+	width:10em;
+	justify-content:center;
+	align-items:center
+}
+
+.btn2-cube
+{
+	cursor:pointer;
+	transition:all .85s cubic-bezier(.17,.67,.14,.93);
+	transform-style:preserve-3d;
+	transform-origin:100% 50%;
+	width:10em;
+	height:4em
+}
+
+.btn2-cube:hover
+{
+	transform:rotateX(-90deg)
+}
+
+.btn2-side
+{
+	box-sizing:border-box;
+	position:absolute;
+	display:inline-block;
+	height:4em;
+	width:10em;
+	text-align:center;
+	text-transform:uppercase;
+	padding-top:1.5em;
+	font-weight:700
+}
+
+.btn2-back
+{
+	transform:rotateX(90deg) translate3d(0,0,2em);
+	box-shadow:inset 0 0 0 5px #fff
+}
+
+.btn2-front
+{
+	box-shadow:inset 0 0 0 5px #fff;
+	transform:translate3d(0,0,2em)
+}
 </style>
 <?php //var_dump($settings['link_button']); ?>
 <a href="<?php echo $settings['link_button']['url'];?>"
@@ -143,10 +183,10 @@ if ($settings['link_button']['is_external']=="on") {
 }
 ?>
 >
-<div class="scene">
-  <div class="cube btn2-ff">
-    <span class="side back text_color_back bg_color_back"> <?php echo $settings['title_button_back'] ?> </span>
-    <span class="side front text_color_front bg_color_front"> <?php echo $settings['title_button_front'] ?> </span>
+<div class="btn2-scene">
+  <div class="btn2-cube btn2-ff">
+    <span class="btn2-side btn2-back text_color_back bg_color_back"> <?php echo $settings['title_button_back'] ?> </span>
+    <span class="btn2-side btn2-front text_color_front bg_color_front"> <?php echo $settings['title_button_front'] ?> </span>
   </div>
 </div>
 </a>
