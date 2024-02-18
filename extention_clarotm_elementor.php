@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: extention clarotm
- * Description: Simple hello world widgets for Elementor.
+ * Plugin Name: Elementor widgets clarotm
+ * Description: Attractive widgets for Elementor.
  * Version:     1.0.0
  * Author:      Amirreza Heydari
  * Author URI:  https://clarotm.ir/
