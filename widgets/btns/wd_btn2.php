@@ -71,7 +71,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'label' => esc_html__( 'Text Color Front', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .text_color_front' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .btn2_text_color_front' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -81,7 +81,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'label' => esc_html__( 'Background Color Front', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .bg_color_front' => 'background: {{VALUE}}',
+					'{{WRAPPER}} .btn2_bg_color_front' => 'background: {{VALUE}}',
 				],
 			]
 		);
@@ -91,7 +91,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'label' => esc_html__( 'Text Color Back', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .text_color_back' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .btn2_text_color_back' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -101,7 +101,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'label' => esc_html__( 'Background Color Back', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .bg_color_back' => 'background: {{VALUE}}',
+					'{{WRAPPER}} .btn2_bg_color_back' => 'background: {{VALUE}}',
 				],
 			]
 		);
@@ -112,7 +112,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::FONT,
 				'default' => "'Open Sans', sans-serif",
 				'selectors' => [
-					'{{WRAPPER}} .btn2-ff' => 'font-family: {{VALUE}}',
+					'{{WRAPPER}} .btn2_ff' => 'font-family: {{VALUE}}',
 				],
 			]
 		);
@@ -136,10 +136,10 @@ if ($settings['link_button']['is_external']=="on") {
 }
 ?>
 >
-<div class="btn2-scene">
-  <div class="btn2-cube btn2-ff">
-    <span class="btn2-side btn2-back text_color_back bg_color_back"> <?php echo $settings['title_button_back'] ?> </span>
-    <span class="btn2-side btn2-front text_color_front bg_color_front"> <?php echo $settings['title_button_front'] ?> </span>
+<div class="btn2_scene">
+  <div class="btn2_cube btn2_ff">
+    <span class="btn2_side btn2_back btn2_text_color_back btn2_bg_color_back"> <?php echo $settings['title_button_back'] ?> </span>
+    <span class="btn2_side btn2_front btn2_text_color_front btn2_bg_color_front"> <?php echo $settings['title_button_front'] ?> </span>
   </div>
 </div>
 </a>

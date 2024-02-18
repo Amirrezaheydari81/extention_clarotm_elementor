@@ -36,6 +36,7 @@ function register_new_widgets( $widgets_manager ) {
 
 	$widgets_manager->register( new \widget_button_1() );
 	$widgets_manager->register( new \widget_button_2() );
+	$widgets_manager->register( new \widget_button_3() );
 
 }
 add_action( 'elementor/widgets/register', 'register_new_widgets' );

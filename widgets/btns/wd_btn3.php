@@ -1,6 +1,6 @@
 <?php
 
-class widget_button_2 extends \Elementor\Widget_Base
+class widget_button_3 extends \Elementor\Widget_Base
 {
     public function get_name()
     {
@@ -42,15 +42,7 @@ class widget_button_2 extends \Elementor\Widget_Base
 				'placeholder' => esc_html__( 'text Button...', 'textdomain' ),
 			]
 		);
-		$this->add_control(
-			'title_button_back',
-			[
-				'label' => esc_html__( 'Title back', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Default title', 'textdomain' ),
-				'placeholder' => esc_html__( 'text Button...', 'textdomain' ),
-			]
-		);
+
 		$this->add_control(
 			'link_button',
 			[
@@ -116,6 +108,7 @@ if ($settings['link_button']['is_external']=="on") {
 }
 ?>
 >
+<?php echo $settings['title_button_front'] ?>
 </a>
 		<?php
 	}

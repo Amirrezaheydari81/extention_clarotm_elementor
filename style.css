@@ -39,14 +39,14 @@
 /* btn1 */
 
 /* btn2 */
-.btn2-scene
+.btn2_scene
 {
 	width:10em;
 	justify-content:center;
 	align-items:center
 }
 
-.btn2-cube
+.btn2_cube
 {
 	cursor:pointer;
 	transition:all .85s cubic-bezier(.17,.67,.14,.93);
@@ -56,12 +56,12 @@
 	height:4em
 }
 
-.btn2-cube:hover
+.btn2_cube:hover
 {
 	transform:rotateX(-90deg)
 }
 
-.btn2-side
+.btn2_side
 {
 	box-sizing:border-box;
 	position:absolute;
@@ -74,13 +74,13 @@
 	font-weight:700
 }
 
-.btn2-back
+.btn2_back
 {
 	transform:rotateX(90deg) translate3d(0,0,2em);
 	box-shadow:inset 0 0 0 5px #fff
 }
 
-.btn2-front
+.btn2_front
 {
 	box-shadow:inset 0 0 0 5px #fff;
 	transform:translate3d(0,0,2em)
