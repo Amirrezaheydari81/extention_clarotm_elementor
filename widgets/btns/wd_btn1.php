@@ -24,7 +24,7 @@ class widget_button_1 extends \Elementor\Widget_Base {
 	protected function register_controls() {
 
 		$this->start_controls_section(
-			'content_section',
+			'button1_section',
 			[
 				'label' => esc_html__( 'Content', 'textdomain' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
