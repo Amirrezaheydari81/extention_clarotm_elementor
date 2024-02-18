@@ -70,7 +70,7 @@ class widget_button_1 extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'background', 'textdomain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .button-1-background' => 'background: {{VALUE}}',
+					'{{WRAPPER}} .button-1-background' => 'background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,{{VALUE}}',
 				],
 			]
 		);
@@ -85,13 +85,6 @@ class widget_button_1 extends \Elementor\Widget_Base {
 				],
 			]
 		);
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'border',
-				'selector' => '{{WRAPPER}} .button_1_border',
-			]
-		);
 		$this->end_controls_section();
 
 	}
@@ -100,16 +93,8 @@ class widget_button_1 extends \Elementor\Widget_Base {
 		$settings= $this->get_settings_for_display();
 		?>
 <!-- Base -->
-<a class="button_1_text_align group relative inline-block focus:outline-none focus:ring" href="<?php echo $settings['link_button']['url']?>">
-  <span
-    class="button-1-background absolute inset-0 translate-x-1.5 translate-y-1.5 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
-  ></span>
-
-  <span
-    class="button_1_border button-1-text-ff button-1-text-color relative inline-block border-2 border-current px-8 py-3 text-sm font-bold group-active:text-opacity-75"
-  >
+<a class="btn1 button-1-background button-1-text-ff button-1-text-color" href="<?php echo $settings['link_button']['url']?>">
   <?php echo $settings['title_button']; ?>
-  </span>
 </a>
 
 		<?php
